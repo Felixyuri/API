@@ -1,6 +1,7 @@
 # 🛠️ Pré-requisito
     .NET 8 SDK
     Visual Studio ou Visual Studio Code
+    dotnet-ef (pode instalar usando este comando no terminal de preferência: dotnet tool install --global dotnet-ef)
 
 # 🛠️ Como Executar o Projeto (Insira no terminal):
     git clone https://github.com/Felixyuri/API.git
