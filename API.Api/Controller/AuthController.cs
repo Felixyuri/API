@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("api/auth")]
+[Route("api")]
 public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
@@ -10,7 +10,7 @@ public class AuthController : ControllerBase
         _authService = authService;
     }
 
-    [HttpPost]
+    [HttpPost("register")]
     public async Task<ActionResult> Register([FromBody] AuthRequest user) {
         var existingUser = await _authService.GetUserByName(user);
 
