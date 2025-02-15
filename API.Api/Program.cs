@@ -72,6 +72,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.Use(async (context, next) => {
+    if (context.Request.Path == "/")
+    {
+        context.Response.Redirect("/swagger/index.html", permanent: true);
+
+        return;
+    }
+
+    await next();
+});
+
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
