@@ -15,6 +15,10 @@
     http://localhost:5172
     ou http://localhost:5000
 
+# 🛠️ Acesse o swagger pelo link:
+    http://localhost:5172/swagger
+    ou http://localhost:5172/
+
 # 🛠️ Executar testes unitários (Insira no terminal):
     cd API.Tests
     dotnet test
